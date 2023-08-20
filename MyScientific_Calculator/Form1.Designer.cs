@@ -36,15 +36,15 @@
             txtResultHex = new TextBox();
             txtResultBinary = new TextBox();
             txtResultOct = new TextBox();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnBS = new Button();
+            btnClearEntry = new Button();
+            btnClear = new Button();
+            btnPM = new Button();
             button5 = new Button();
             btn9 = new Button();
             btn8 = new Button();
             btn7 = new Button();
-            button9 = new Button();
+            btnMult = new Button();
             btn3 = new Button();
             btn2 = new Button();
             btn1 = new Button();
@@ -52,9 +52,9 @@
             btn6 = new Button();
             btn5 = new Button();
             btn4 = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
+            btnDiv = new Button();
+            btnEquals = new Button();
+            btnDot = new Button();
             btn0 = new Button();
             SuspendLayout();
             // 
@@ -67,7 +67,6 @@
             label1.Size = new Size(86, 19);
             label1.TabIndex = 0;
             label1.Text = "10_Deci";
-            label1.Click += label1_Click;
             // 
             // txtResult
             // 
@@ -76,6 +75,7 @@
             txtResult.Name = "txtResult";
             txtResult.Size = new Size(510, 35);
             txtResult.TabIndex = 1;
+            txtResult.Text = "0";
             txtResult.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
@@ -135,46 +135,49 @@
             txtResultOct.TabIndex = 8;
             txtResultOct.TextAlign = HorizontalAlignment.Right;
             // 
-            // button1
+            // btnBS
             // 
-            button1.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(23, 149);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 66);
-            button1.TabIndex = 9;
-            button1.Text = "⌫";
-            button1.UseVisualStyleBackColor = true;
+            btnBS.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBS.Location = new Point(23, 149);
+            btnBS.Name = "btnBS";
+            btnBS.Size = new Size(75, 66);
+            btnBS.TabIndex = 9;
+            btnBS.Text = "⌫";
+            btnBS.UseVisualStyleBackColor = true;
+            btnBS.Click += btnBS_Click;
             // 
-            // button2
+            // btnClearEntry
             // 
-            button2.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(104, 149);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 66);
-            button2.TabIndex = 10;
-            button2.Text = "CE";
-            button2.UseVisualStyleBackColor = true;
+            btnClearEntry.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearEntry.Location = new Point(104, 149);
+            btnClearEntry.Name = "btnClearEntry";
+            btnClearEntry.Size = new Size(75, 66);
+            btnClearEntry.TabIndex = 10;
+            btnClearEntry.Text = "CE";
+            btnClearEntry.UseVisualStyleBackColor = true;
+            btnClearEntry.Click += btnClearEntry_Click;
             // 
-            // button3
+            // btnClear
             // 
-            button3.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(185, 149);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 66);
-            button3.TabIndex = 11;
-            button3.Text = "C";
-            button3.UseVisualStyleBackColor = true;
+            btnClear.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClear.Location = new Point(185, 149);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(75, 66);
+            btnClear.TabIndex = 11;
+            btnClear.Text = "C";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
             // 
-            // button4
+            // btnPM
             // 
-            button4.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(266, 149);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 66);
-            button4.TabIndex = 12;
-            button4.Text = "±";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btnPM.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPM.Location = new Point(266, 149);
+            btnPM.Name = "btnPM";
+            btnPM.Size = new Size(75, 66);
+            btnPM.TabIndex = 12;
+            btnPM.Text = "±";
+            btnPM.UseVisualStyleBackColor = true;
+            btnPM.Click += btnPM_Click;
             // 
             // button5
             // 
@@ -185,6 +188,7 @@
             button5.TabIndex = 16;
             button5.Text = "+";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += numberOper;
             // 
             // btn9
             // 
@@ -219,15 +223,16 @@
             btn7.UseVisualStyleBackColor = true;
             btn7.Click += EnterNumbers;
             // 
-            // button9
+            // btnMult
             // 
-            button9.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button9.Location = new Point(266, 365);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 66);
-            button9.TabIndex = 24;
-            button9.Text = "*";
-            button9.UseVisualStyleBackColor = true;
+            btnMult.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMult.Location = new Point(266, 365);
+            btnMult.Name = "btnMult";
+            btnMult.Size = new Size(75, 66);
+            btnMult.TabIndex = 24;
+            btnMult.Text = "*";
+            btnMult.UseVisualStyleBackColor = true;
+            btnMult.Click += numberOper;
             // 
             // btn3
             // 
@@ -271,6 +276,7 @@
             button13.TabIndex = 20;
             button13.Text = "-";
             button13.UseVisualStyleBackColor = true;
+            button13.Click += numberOper;
             // 
             // btn6
             // 
@@ -305,36 +311,38 @@
             btn4.UseVisualStyleBackColor = true;
             btn4.Click += EnterNumbers;
             // 
-            // button17
+            // btnDiv
             // 
-            button17.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button17.Location = new Point(266, 437);
-            button17.Name = "button17";
-            button17.Size = new Size(75, 66);
-            button17.TabIndex = 28;
-            button17.Text = "/";
-            button17.UseVisualStyleBackColor = true;
+            btnDiv.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDiv.Location = new Point(266, 437);
+            btnDiv.Name = "btnDiv";
+            btnDiv.Size = new Size(75, 66);
+            btnDiv.TabIndex = 28;
+            btnDiv.Text = "/";
+            btnDiv.UseVisualStyleBackColor = true;
+            btnDiv.Click += numberOper;
             // 
-            // button18
+            // btnEquals
             // 
-            button18.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button18.Location = new Point(185, 437);
-            button18.Name = "button18";
-            button18.Size = new Size(75, 66);
-            button18.TabIndex = 27;
-            button18.Text = "=";
-            button18.UseVisualStyleBackColor = true;
+            btnEquals.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnEquals.Location = new Point(185, 437);
+            btnEquals.Name = "btnEquals";
+            btnEquals.Size = new Size(75, 66);
+            btnEquals.TabIndex = 27;
+            btnEquals.Text = "=";
+            btnEquals.UseVisualStyleBackColor = true;
+            btnEquals.Click += btnEquals_Click;
             // 
-            // button19
+            // btnDot
             // 
-            button19.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            button19.Location = new Point(104, 437);
-            button19.Name = "button19";
-            button19.Size = new Size(75, 66);
-            button19.TabIndex = 26;
-            button19.Text = ".";
-            button19.UseVisualStyleBackColor = true;
-            button19.Click += EnterNumbers;
+            btnDot.Font = new Font("DotumChe", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDot.Location = new Point(104, 437);
+            btnDot.Name = "btnDot";
+            btnDot.Size = new Size(75, 66);
+            btnDot.TabIndex = 26;
+            btnDot.Text = ".";
+            btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += EnterNumbers;
             // 
             // btn0
             // 
@@ -352,11 +360,11 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(862, 511);
-            Controls.Add(button17);
-            Controls.Add(button18);
-            Controls.Add(button19);
+            Controls.Add(btnDiv);
+            Controls.Add(btnEquals);
+            Controls.Add(btnDot);
             Controls.Add(btn0);
-            Controls.Add(button9);
+            Controls.Add(btnMult);
             Controls.Add(btn3);
             Controls.Add(btn2);
             Controls.Add(btn1);
@@ -368,10 +376,10 @@
             Controls.Add(btn9);
             Controls.Add(btn8);
             Controls.Add(btn7);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnPM);
+            Controls.Add(btnClear);
+            Controls.Add(btnClearEntry);
+            Controls.Add(btnBS);
             Controls.Add(txtResultOct);
             Controls.Add(txtResultBinary);
             Controls.Add(txtResultHex);
@@ -397,15 +405,15 @@
         private TextBox txtResultHex;
         private TextBox txtResultBinary;
         private TextBox txtResultOct;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnBS;
+        private Button btnClearEntry;
+        private Button btnClear;
+        private Button btnPM;
         private Button button5;
         private Button btn9;
         private Button btn8;
         private Button btn7;
-        private Button button9;
+        private Button btnMult;
         private Button btn3;
         private Button btn2;
         private Button btn1;
@@ -413,9 +421,9 @@
         private Button btn6;
         private Button btn5;
         private Button btn4;
-        private Button button17;
-        private Button button18;
-        private Button button19;
+        private Button btnDiv;
+        private Button btnEquals;
+        private Button btnDot;
         private Button btn0;
     }
 }

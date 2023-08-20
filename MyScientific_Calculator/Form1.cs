@@ -9,22 +9,7 @@ namespace MyScientific_Calculator
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
         {
 
         }
@@ -87,6 +72,70 @@ namespace MyScientific_Calculator
             int decimalNumber = (int)Convert.ToInt64(text);
             string binaryNumber = Convert.ToString(decimalNumber, 2);
             txtResultBinary.Text = binaryNumber;
+        }
+
+        private void numberOper(object sender, EventArgs e)
+        {
+            Button num = (Button)sender;
+
+            enterFirstValue = Convert.ToDouble(txtResult.Text);
+            op = num.Text;
+            txtResult.Text = "";
+        }
+
+        private void btnEquals_Click(object sender, EventArgs e)
+        {
+            enterSecondValue = Convert.ToDouble(txtResult.Text);
+
+            switch (op)
+            {
+                case "+":
+                    txtResult.Text = (enterFirstValue + enterSecondValue).ToString();
+                    break;
+                case "-":
+                    txtResult.Text = (enterFirstValue - enterSecondValue).ToString();
+                    break;
+                case "*":
+                    txtResult.Text = (enterFirstValue * enterSecondValue).ToString();
+                    break;
+                case "/":
+                    txtResult.Text = (enterFirstValue / enterSecondValue).ToString();
+                    break;
+
+                default: break;
+            }
+        }
+
+        private void btnClearEntry_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "0";
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "0";
+
+            String f, s;
+
+            f = Convert.ToString(enterFirstValue);
+            s = Convert.ToString(enterSecondValue);
+
+            f = "";
+            s = "";
+        }
+
+        private void btnPM_Click(object sender, EventArgs e)
+        {
+            double q = Convert.ToDouble(txtResult.Text);
+            txtResult.Text = Convert.ToString(-1 * q);
+        }
+
+        private void btnBS_Click(object sender, EventArgs e)
+        {
+            if (txtResult.TextLength > 0)
+            {
+                txtResult.Text = txtResult.Text.Remove(txtResult.TextLength - 1, 1);
+            }
         }
     }
 }

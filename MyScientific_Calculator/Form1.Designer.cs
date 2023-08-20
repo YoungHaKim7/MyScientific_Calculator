@@ -33,9 +33,9 @@
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            txtResultHex = new TextBox();
+            txtResultBinary = new TextBox();
+            txtResultOct = new TextBox();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -76,6 +76,7 @@
             txtResult.Name = "txtResult";
             txtResult.Size = new Size(510, 35);
             txtResult.TabIndex = 1;
+            txtResult.TextAlign = HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -107,29 +108,32 @@
             label4.TabIndex = 5;
             label4.Text = "2_Bina";
             // 
-            // textBox2
+            // txtResultHex
             // 
-            textBox2.Font = new Font("Malgun Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(104, 69);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(510, 33);
-            textBox2.TabIndex = 6;
+            txtResultHex.Font = new Font("Malgun Gothic", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtResultHex.Location = new Point(104, 69);
+            txtResultHex.Name = "txtResultHex";
+            txtResultHex.Size = new Size(510, 33);
+            txtResultHex.TabIndex = 6;
+            txtResultHex.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox3
+            // txtResultBinary
             // 
-            textBox3.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(104, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(510, 29);
-            textBox3.TabIndex = 7;
+            txtResultBinary.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtResultBinary.Location = new Point(104, 2);
+            txtResultBinary.Name = "txtResultBinary";
+            txtResultBinary.Size = new Size(510, 29);
+            txtResultBinary.TabIndex = 7;
+            txtResultBinary.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txtResultOct
             // 
-            textBox4.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(104, 37);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(510, 29);
-            textBox4.TabIndex = 8;
+            txtResultOct.Font = new Font("Malgun Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txtResultOct.Location = new Point(104, 37);
+            txtResultOct.Name = "txtResultOct";
+            txtResultOct.Size = new Size(510, 29);
+            txtResultOct.TabIndex = 8;
+            txtResultOct.TextAlign = HorizontalAlignment.Right;
             // 
             // button1
             // 
@@ -367,9 +371,9 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(txtResultOct);
+            Controls.Add(txtResultBinary);
+            Controls.Add(txtResultHex);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label3);
@@ -389,9 +393,9 @@
         private Label label3;
         private Label label2;
         private Label label4;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private TextBox txtResultHex;
+        private TextBox txtResultBinary;
+        private TextBox txtResultOct;
         private Button button1;
         private Button button2;
         private Button button3;

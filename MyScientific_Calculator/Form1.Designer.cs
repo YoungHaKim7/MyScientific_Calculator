@@ -334,6 +334,7 @@
             button19.TabIndex = 26;
             button19.Text = ".";
             button19.UseVisualStyleBackColor = true;
+            button19.Click += EnterNumbers;
             // 
             // btn0
             // 
